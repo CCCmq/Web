@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.item_left{
+	width: 530px;
+	height: 356px;
+	box-sizing: border-box;
+	border: 1px solid #e4e5e5;
+}
+.item_left p{
+	width: 528px;
+	height: 40px;
+	font-family: "黑体";
+	font-size: 12px;
+	line-height: 40px;
+	text-indent: 20px;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #f4f5f6;
+	color: #c3c3c3;
+}
+.item_left .wraper{
+	width: 530px;
+	height: 316px;
+	box-sizing: border-box;
+	padding: 40px 20px 0 20px;
+	position: relative;
+}
+.item_left .wraper .tab{
+
+}
+.item_left .wraper .tab input[type="radio"]{
+	display: none;
+}
+.item_left .wraper .tab .item{
+	width: 85px;
+	height: 26px;
+	background-color: #dedef0;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	line-height: 25px;
+	text-align: center;
+	color: #000;
+	display: inline-block;
+	position: absolute;
+	top: 13px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.item_left .wraper .tab:nth-child(1) .item{
+	left: 20px;
+}
+.item_left .wraper .tab:nth-child(2) .item{
+	left: 110px;
+}
+.item_left .wraper .tab:nth-child(3) .item{
+	left: 200px;
+}
+.item_left .wraper .tab:nth-child(4) .item{
+	left: 290px;
+}
+.item_left .wraper .tab:nth-child(5) .item{
+	left: 380px;
+}
+.item_left .wraper .tab .content{
+	width: 492px;
+	height: 252px;
+	box-sizing: border-box;
+	padding-left: 36px;
+	padding-top: 30px;
+	border: 1px solid #cbcbcb;
+}
+.item_left .wraper .tab .content table{
+	border-color: #d3d3d3;
+	border-collapse: collapse;
+	width: 400px;
+	height: 187px;
+}
+.item_left .wraper .tab .content table tbody tr td{
+	font-family: "宋体";
+	font-size: 12px;
+	width: 100px;
+	height: 30px;
+	text-indent: 10px;
+}
+.item_left .wraper .tab .content table tbody tr td a{
+	text-decoration: none;
+	color: #000;
+}
+.item_left .wraper .tab .content table tbody tr td:hover{
+	background-color: #cbcbcb;
+	cursor: pointer;
+}
+.item_left .wraper .tab .content{
+	display: none;
+}
+.item_left .wraper .tab input:checked~.item{
+	border: 1px solid #cbcbcb;
+	border-bottom-color: #fff;
+}
+.item_left .wraper .tab input:checked~.content{
+	display: block;
+}

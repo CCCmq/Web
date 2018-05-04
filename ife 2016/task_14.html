@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_14</title>
+</head>
+<body>
+	<h3>污染城市列表</h3>
+	<ul id="aqi-list">
+		<!--
+		<li>第一名：福州（样例），10</li>
+	-->
+	</ul>
+<script type="text/javascript">
+	var aqiData = [
+	["北京",90],
+	["上海",50],
+	["福州",10],
+	["广州",50],
+	["成都",90],
+	["西安",100]
+	];
+	(function(){
+		/*
+        在注释下方编写代码
+        遍历读取aqiData中各个城市的数据
+        讲空气质量指数大于60的城市显示到aqi—list的列表中
+		*/
+		var mylist = document.getElementById("aqi-list");
+		function sortNum(a,b){
+			return b[1]-a[1] ; //降序排列
+		}
+		var myarr=["一","二","三","四","五","六"];
+		aqiData.sort(sortNum);
+		for (var i = 0; i <aqiData.length; i++)
+		 {
+		 	if (aqiData[i][1]>=60) 
+		 	{
+		 		var myli = document.createElement("li"); //创建新元素
+		 		myli.innerHTML = "第"+myarr[i]+"名："+aqiData[i][0]+","+aqiData[i][1];
+		 		mylist.appendChild(myli);//插入节点li
+		 	}
+		 }
+	})();
+</script>
+</body>
+</html>

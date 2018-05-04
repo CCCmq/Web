@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_3</title>
+	<link rel="stylesheet" type="text/css" href="task_3.css">
+</head>
+<body>
+	<div class="wrap">
+
+		<div class="left">
+			<img src="IFE 图片/task_3 img/t0103d769b6e0973b52.jpg">	
+			<p>团队名称</p>
+		</div>
+	
+		<div class="right">
+			<img src="IFE 图片/task_3 img/t0103d769b6e0973b52.jpg">	
+			<img src="IFE 图片/task_3 img/t0103d769b6e0973b52.jpg">	
+			<img src="IFE 图片/task_3 img/t0103d769b6e0973b52.jpg">	
+			<img src="IFE 图片/task_3 img/t0103d769b6e0973b52.jpg">	
+		</div>
+
+		<div class="middle">
+			<article>
+				三栏式布局上网查到有四种方法比较流行，float+margin、position+margin、圣杯布局、双飞翼布局这四种方法各有优点和缺点。<br>
+				float+margin和position+margin&nbsp;&nbsp;&nbsp;&nbsp;这两种方法比较简单，理解起来也很容易上手。但是前一种方法缺点是先渲染了侧边栏，而不是主题栏，html部分注意要先左右最后中间。后者的缺点是浏览器串口小到一定程度时主面板与中间栏会发生重叠。<br>
+				圣杯布局与双飞翼布局比较复杂，不容易理解。相当于采用margin负值法。中间主题用双层标签，外层宽度100%，并左浮动。内层主体中心内容采用margin，左栏左浮动-100%，右栏左浮动负右栏宽度像素值。html部分先中间后左右。<br>
+				清除浮动采用overflow:auto;方法，但是这种方法必须设置最小宽度。
+			</article>
+		</div>
+
+	</div>
+
+</body>
+</html>

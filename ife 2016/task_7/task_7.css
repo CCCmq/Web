@@ -1,0 +1,645 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+body{
+	min-width: 1280px;
+	overflow: auto;
+	width: 100%;
+	font-family: Verdana, Helvetica  		   /*英文字体优先指定*/
+			 "Microsoft YaHei", "微软雅黑", /*中英文同时给出, for Windows*/
+			 serif; 
+}
+header{
+	height: 50px;
+	width: 100%;
+}
+
+header .logo{
+	float: left;
+	margin-left: 60px;
+	height: 50px;
+}
+header .logo img{
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+header .logo span{
+	position: absolute;
+	font-size: 22px;
+	font-family: "黑体";
+	top: 15px;
+	left: 100px;
+}
+header nav{
+	float: right;
+	margin-right: 15px;
+}
+header nav li{
+	float: left;
+	width: 15%;
+	font-size: 14px;
+	list-style: none;
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	width: 100px;
+}
+nav ul li:nth-child(6){
+	background-image: url("IFE 图片/task_1_7_1/icon-2.jpg");
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+}
+nav a{
+	text-decoration: none;
+	color: gray;
+	display: block; /* 变成块状元素，border边框才能在最底下出现*/
+}
+nav a:hover,a:active{
+	color: #ea6b60;
+	border-bottom: 3px solid #ea6b60;
+}
+.start{
+	position: relative;
+
+}
+.start img{
+	width: 100%;
+	display: inline-block;	
+	height: 700px;
+}
+.time{
+	position: absolute;
+	top: 200px;
+	left: 150px;
+	width: 500px;
+}
+.middle_1{
+	color: #ffffff;
+	font-size: 60px;
+	margin-bottom: 20px;
+	text-align: left;
+	margin-left: -10px;
+}
+.middle_2{
+	color: #ffffff;
+	font-size: 21px;
+	margin-bottom: 60px;
+	line-height: 32px;
+	text-align: left;
+}
+.time a{
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	line-height: 70px;
+	width: 330px;
+	height: 70px;
+	font-size: 30px;
+	background-color: #e74f4d;
+	text-decoration: none;
+	border: 1px solid #e74f4d;
+}
+.time a:hover,.time a:active{
+	background-color: #ffffff;
+	color: #e74f4d;
+}
+.four_words{
+	width: 100%;
+	height: 240px;
+}
+.imglist div{
+	height: 120px;
+	float: left;
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.words div{
+	width: 25%;
+	float: left;
+	width: 25%;
+	margin-right: -2px;
+	border-right: 2px solid #aba6a5;
+	height: 50px;
+}
+.words div p{
+	color: #aba6a5;
+	font-size: 14px;
+	text-align: center;
+}
+.insensible{
+	width: 100%;
+	height: 600px;
+	text-align: center;
+	background-color: #ededec;
+	padding-top: 100px;
+}
+.about{
+	width: 100%;
+	height: 300px;
+}
+.insensible img{
+	margin-bottom: 30px;
+}
+.text_1{
+	margin-bottom: 60px;
+	font-size: 54px;
+	color: #aba6a5;
+}
+.cover{
+	width: 100%;
+	height: 300px;
+	background-image: url("IFE 图片/task_1_7_1/pic02.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	padding-top: 50px;
+}
+.cover h1{
+	font-size: 21px;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+.cover p{
+	margin-bottom: 40px;
+}
+.cover form{
+	width: 80%;
+	margin: 0 auto;
+}
+.cover form select{
+	width: 200px;
+	height: 34px;
+	font-size: 12px;
+	color: #aba6a5;
+	margin-right: 20px;
+	background: url("IFE 图片/task_1_7_1/icon-8.png") no-repeat #ffffff;
+	background-position: 170px center;
+	background-size: 20px;
+	display: inline-block;
+	-webkit-appearance: none;
+	outline: none;
+	box-sizing: border-box;
+}
+.cover form select:hover{
+	border: 1px solid #be4f4d;
+}
+.cover form select option{
+	padding: 20px;
+}
+.cover form input[type="submit"]{
+	width: 200px;
+	height: 34px;
+	line-height: 34px;
+	color: #ffffff;
+	background-color: #be4f48;
+	border: none;
+	font-weight: bold;
+	letter-spacing: 25px;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+}
+.city_activity{
+	width: 100%;
+	height: 600px;
+	background-color: #edeaea;
+	text-align: center;
+	position: relative;
+}
+.container{
+	width: 1180px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -200px 0 0 -590px;
+	overflow: auto;
+	min-width: 1180px;
+}
+.container div{
+	width: 25%;
+	float: left;
+	height: 500px;
+}
+.container img:hover{
+	width: 250px;
+
+}
+.container h3{
+	font-size: 14px;
+	color: #44403f;
+	margin: 10px 0;
+}
+.container h2{
+	font-size: 24px;
+	letter-spacing: 30px;
+	text-indent: 30px;
+}
+.container p{
+	font-size: 12px;
+	color: #b3afac;
+}
+.container p:nth-child(2){
+	margin: 10px 0;
+}
+.new_world{
+	width: 100%;
+	height: 560px;
+}
+.left{
+	width: 65%;
+	height: 560px;
+	float: left;
+	background: url("IFE 图片/task_1_7_1/pic07.jpg") no-repeat;
+	background-size: cover;
+}
+.left .triangle{
+	border: solid 20px transparent;
+	border-right: solid 20px #ffffff;
+	position: relative;
+	top: 260px;
+}
+.left_text{
+	text-align: center;
+	color: #ffffff;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 130px;
+}
+.left_text h1{
+	font-size: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+.left_text h2{
+	font-size: 150px;
+	height: 150px;
+	line-height: 150px;
+}
+.left_text h3{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.right{
+	height: 560px;
+	text-align: center;
+	float: right;
+	width: 35%;
+}
+.wraper{
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	top: 130px;
+	position: relative;
+}
+.dot{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	border: 1px solid #6c5c5c;
+	position: absolute;
+	top: 280px;
+}
+.tab:nth-child(1) .dot{
+	left: 38%;
+}
+.tab:nth-child(2) .dot{
+	left: 48%;
+}
+.tab:nth-child(3) .dot{
+	left: 58%;
+}
+input[type="radio"]{
+	display: none;
+}
+.content{
+	display: none;
+	margin-bottom: 40px;
+}
+.tab input:checked~.dot{
+	background-color: #6c5c5c;
+}
+.tab input:checked~.content{
+	display: block;
+}
+.content h1{
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+.content span{
+	color: #be4f48;
+}
+.content p{
+	text-align: left;
+	line-height: 25px;
+	font-size: 13px;
+	color: #b3afac;
+	letter-spacing: 2px;
+}
+.wraper input[type="submit"]{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #be4f48;
+	color: #be4f48;
+	background: #ffffff;
+	cursor: pointer;
+	outline: none;
+}
+.wraper input[type="submit"]:hover{
+	background: #be4f48;
+	color: #ffffff;
+}
+.new_time{
+	width: 100%;
+	height: 560px;
+}
+
+.par_1{
+	width: 35%;
+	height: 560px;
+	float: left;
+	background-color: #e84e4c;
+}
+.par_2{
+	height: 560px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+.par_3{
+	width: 35%;
+	height: 560px;
+	float: right;
+	background-image: url("IFE 图片/task_1_7_1/pic08.jpg");
+	background-size: cover;
+}
+.middle_part{
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	height: 200px;
+	top: 180px;
+}
+.middle_part span{
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	border-bottom: 2px solid #ffffff;
+	margin-bottom: 20px;
+}
+.middle_part a{
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	display:block;
+	text-decoration: none;
+	margin: 0 auto;
+}
+.middle_part1 p{
+	color: #ffffff;
+	line-height: 30px;
+}
+.middle_part1 a{
+	color: #ffffff;
+	border: 1px solid #ffffff;
+}
+.middle_part1 a:hover{
+	background-color: #be4f48;
+
+}
+.middle_part2 p{
+	line-height: 30px;
+}
+.middle_part2 a{
+	color: #000000;
+	border: 1px solid #000000;
+}
+.middle_part2 a:hover{
+	background-color: #be4848;
+}
+.middle_part2 span{
+	border-color: #adadad;
+}
+.par_3 .triangle{
+	width: 0;
+	height: 0;
+	border: solid 20px transparent;
+	border-left: solid 20px #ffffff;
+	position: relative;
+	top: 260px;
+}
+.volunteer{
+	width: 100%;
+	height: 680px;
+}
+.main{
+	width: 80%;
+	margin: 0 auto;
+}
+.main .mes{
+	height: 100px;
+	margin: 120px 0 100px 0;
+	text-align: center;
+}
+.main .mes h2{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.main .mes span{
+	display: inline-block;
+	width: 30px;
+	height: 15px;
+	border-top: 2px solid #e44f4b;
+}
+.main .mes span:hover{
+	width: 120px;
+}
+.main .mes p{
+	font-size: 13px;
+	color: #b3afac;
+}
+.main .mes_left{
+	text-align: left;
+	width: 27%;
+	height: 300px;
+	float: left;
+}
+.main .mes_right{
+	float: right;
+	width: 63%;
+	text-align: left;
+	height: 300px;
+}
+.main .mes_left h3{
+	font-size: 16px;
+	color: #6c5c5c;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+.main .mes_left p{
+	font-size: 13px;
+	color: #b3afac;
+	line-height: 20px;
+}
+.main .mes_left h4 span{
+	font-size: 8px;
+	margin-right: 5px;
+}
+.main .mes_left h4{
+	text-align: right;
+	font-size: 13px;
+	color: #b3afac;
+	margin-bottom: 30px;
+}
+.mes_right form input[type="text"]{
+	height: 40px;
+	width: 320px;
+	font-size: 14px;
+	box-sizing: border-box;
+	background-color: #e3e3e3;
+	outline: none;
+	border: none;
+	margin-right: 15px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.mes_right form input[value]{
+	color: #4e3a3f;
+}
+.mes_right form textarea{
+	width: 663px;
+	height: 145px;
+	font-size: 14px;
+	color: #4e3a3f;
+	box-sizing: border-box;
+	outline: none;
+	border: 0;
+	background-color: #e3e3e3;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+::-webkit-textarea-placeholder{
+	color: #4e3a3f;
+}
+.mes_right form input[type="submit"]{
+	width: 663px;
+	height: 40px;
+	font-size: 14px;
+	color: #4e3a3f;
+	line-height: 40px;
+	text-align: center;
+	outline: none;
+	background: #e3e3e3;
+	cursor: pointer;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	font-weight: bold;
+}
+.mes_right form input[type="submit"]:hover{
+	background: gray;
+}
+footer{
+	text-align: center;
+	width: 100%;
+	background-color: #33363f;
+	height: 450px;
+	color: #ffffff;
+	position: relative;
+}
+footer .text{
+	height: 80px;
+	padding-top: 80px;
+}
+footer .text h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: 1000;
+}
+footer .text p{
+	font-size: 14px;
+	line-height: 20px;
+}
+footer .email input[type="email"]{
+	width: 500px;
+	height: 40px;
+	font-size: 15px;
+	box-sizing: border-box;
+	padding-left: 15px;
+	color: #75757f;
+	margin-top: 20px;
+}
+footer .email input[type="submit"]{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	color: #75757f;
+	text-align: center;
+	font-size: 15px;
+	background-color: #75757f;
+	color: #ffffff;
+	letter-spacing: 5px;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+	margin-bottom: 40px;
+}
+footer .email input[type="submit"]:hover{
+	background-color: gray;
+}
+footer .icon{
+	width: 100%;
+	height: 50px;
+	color: #ffffff;
+	font-size: 30px;
+	display: inline-block;
+}
+footer .icon img{
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 0 10px;
+}
+footer .icon img:hover{
+	width: 50px;
+}
+footer .last{
+	position: absolute;
+	height: 80px;
+	width: 100%;
+	background-color: #30303a;
+	top: 370px;
+	font-size: 8px;
+	color: #ffffff;
+	line-height: 80px;
+}
+footer .last span{
+	display: inline-block;
+	position: absolute;
+	left: 100px;
+	
+}
+footer .last a{
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	right: 40px;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+footer .last a:hover{
+	color: yellow;
+}
