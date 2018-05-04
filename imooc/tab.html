@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radio选项卡切换</title>
+    <style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+    .test-box{
+        width: 50%;
+        margin: 10px auto 0;
+        padding-top: 25px;
+        position: relative;
+    }
+    .test-box>.test-tab{
+        width:100%;
+    }
+    .test-box .test-label{
+        background-color: #eee;
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        box-sizing: border-box;
+    }
+    .test-label{
+        position: absolute;
+        top: 0;
+        border:solid #ccc; 
+        border-width:1px 0px 0px 1px;
+    }
+    .test-tab:nth-child(1) .test-label{left: 0;}
+    .test-tab:nth-child(2) .test-label{left: 25%;}
+    .test-tab:nth-child(3) .test-label{left: 50%;}
+    .test-tab:last-child .test-label{border-right-width:1px;}
+    .test-box .content{
+        background-color: #fff;
+        height: 20px;
+        display: none;
+        border:1px solid #ccc;}
+    .test-box input.test-radio{display: none;}
+    .test-box input:checked~.test-label{
+        background-color: #fff;
+        border-bottom: 1px solid #fff;}
+    .test-box input:checked~.content{display: block;}
+</style>
+</head>
+<body>
+    <div class="test-box">
+        <div class="test-tab">
+            <input type="radio" class="test-radio" id="radio1" name="test-radio" checked>
+            <label for="radio1" class="test-label">选项卡1</label>
+            <div class="content"><P>asdasdsad1</P></div>
+        </div>
+        <div class="test-tab">
+            <input type="radio" class="test-radio" id="radio2" name="test-radio">
+            <label for="radio2" class="test-label">选项卡2</label>
+            <div class="content"><P>asdasdsad2</P></div>
+        </div>
+        <div class="test-tab">
+            <input type="radio" class="test-radio" id="radio3" name="test-radio">
+            <label for="radio3" class="test-label">选项卡3</label>
+            <div class="content"><P>asdasdsad3</P></div>
+        </div>
+    </div>
+</body>
+</html>

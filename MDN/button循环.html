@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>button循环点击</title>
+</head>
+<body>
+	<button>Cilck me</button>
+	<script type="text/javascript">
+		var num = 1;
+		function createParagraph() {
+			var para = document.createElement('p');
+			para.innerHTML = "You cilcked the button "+ num +" time !";
+			document.body.appendChild(para);
+			num++;
+		}
+
+		var buttons = document.querySelectorAll('button');
+
+		for (var i = 0; i<buttons.length ; i++) {
+			buttons[i].addEventListener('click',createParagraph);
+			
+		}
+	</script>
+</body>
+</html>

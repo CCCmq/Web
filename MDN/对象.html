@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+	<p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+</body>
+
+<script>
+	function Person(first,last,age,gender,interests) {
+		this.name = {
+			first,
+			last
+		};
+		this.age = age;
+		this.gender = gender;
+		this.interests = interests;
+
+		this.bio = function() {
+			var alertText = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.'
+			if(gender === 'male' || gender === 'm' || gender === 'M' || gender === 'Male'){
+				qua = 'He like ';
+			} else if( gender === 'female' || gender === 'F' || gender === 'f' || gender === 'Female') {
+				qua = 'She like ';
+			} else {
+				qua = 'They like ';
+			}
+			alertText += qua;
+			if(this.interests.length === 1){
+				alertText += this.interests[0]+'.';
+			} else if(this.interests.length === 2) {
+				alertText += this.interests[0] + ' and ' + this.interests[1] + ' .';
+			} else {
+				for( var i = 0 ;i < this.interests.length;i++){
+					if(i === this.interests.length-1){
+						alertText += ' and ' + this.interests[i] + ' .';
+					} else{
+						alertText += this.interests[i]+',';
+					}
+				}
+			}
+			alert(alertText);
+		};
+		this.greeting = function() {
+			alert('Hi! I\'m' + this.name.first + '.');
+		};
+	};
+	var person1 = new Person('Bob','Smith',32,'female',['music','skiing','guitar']);
+</script>
+</html>

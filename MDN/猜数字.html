@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+
+      var randomNumber = Math.floor(Math.random()*100)+1; //取得随机数字
+
+      var guesses = document.querySelector('.guesses');
+      var lastResult = document.querySelector('.lastResult');
+      var lowOrHi = document.querySelector('.lowOrHi');
+
+      var guessSubmit = document.querySelector('.guessSubmit');
+      var guessField = document.querySelector('.guessField');
+
+      var guessCount = 1;
+      var resetButton;
+      guessField.focus();
+ 
+    /*
+      函数checkGuess()功能： 检查猜想结果
+    */
+      function checkGuess() {
+        var userGuess = Number(guessField.value);   // 得到玩家猜想数据
+        if (guessCount === 1) {
+          guesses.textContent = "Previous guesses:"; //如果玩家是第一次输入
+        }
+        guesses.textContent += userGuess + ' ';  //guesses p 显示玩家输入过的数据
+
+        if (userGuess === randomNumber)   //如果玩家输入正确
+        {
+          lastResult.textContent = 'Congratulations! You got it right!'; 
+          lastResult.style.backgroundColor = 'green';
+          lowOrHi.textContent = '';    //清空最后显示数据太高或太低的一行内容
+          setGameOver();   //重新游戏
+        } else if (guessCount === 10){  
+          lastResult.textContent = "!!!GAME OVER!!!";  //玩家猜数次数超过限制
+          setGameOver();
+        } else{
+          lastResult.textContent = 'Wrong!';
+          lastResult.style.backgroundColor = 'red';  //猜错背景颜色变红
+          if(userGuess <randomNumber){
+            lowOrHi.textContent = 'Last guess was too low!';
+          } else if (userGuess > randomNumber){
+            lowOrHi.textContent = 'Last guess was too high!';
+          }
+        }
+        guessCount++; //增加一次玩家次数，相当于玩家消耗了一次机会
+        guessField.value = ""; //文本值清空
+        guessField.focus();  //重新将焦点设置在文本段里
+      }
+
+      guessSubmit.addEventListener('click',checkGuess); //按下按钮触发checkGuess()事件
+      /*
+      setGameOver()函数功能：用户猜数失败，游戏结束
+      */
+      function setGameOver(){
+        guessField.disabled = true;  //disable意味不可以的,即输入框不能输入数字
+        guessSubmit.disabled = true;  //按钮失效
+        resetButton = document.createElement('button'); //重新游戏按钮
+        resetButton.textContent = 'Start new game!';
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener('click',resetGame); //重新游戏按钮触发，重新开始游戏
+      }
+      /*
+      resetGame()函数功能：重新开始游戏
+      */
+      function resetGame(){
+        guessCount = 1;
+
+        var resetParas = document.querySelectorAll('.resultParas p'); //删除所有信息段落
+        for (var i = 0 ; i < resetParas.length ; i++){
+          resetParas[i].textContent = ''; //清空信息
+        }
+
+        resetButton.parentNode.removeChild(resetButton); //移除重新游戏按钮，按钮按下后便消失
+
+        guessField.disabled = false;  //输入框重新启动
+        guessSubmit.disabled = false;  //确认按钮有效
+        guessField.value = ''; //清空输入框内容
+        guessField.focus();
+
+        lastResult.style.backgroundColor = 'white'; //红或者绿也好，重新游戏就得是白色
+
+        randomNumber = Math.floor(Math.random()*100)+1; //重新猜数
+      }
+    </script>
+  </body>
+</html>

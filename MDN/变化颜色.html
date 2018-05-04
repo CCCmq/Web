@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变化颜色</title>
+	<style type="text/css">
+		div{
+			background-color: #4066BE;
+			height: 100px;
+			width: 20%;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		for(var i = 0 ; i < 25 ; i++){
+			var myDiv = document.createElement('div');
+			document.body.appendChild(myDiv);
+		}
+
+		function random(number){
+			return Math.floor(Math.random()*number);
+		}
+
+		function bgChange(){
+			var rndCol = 'rgb('+random(255)+','+random(255)+','+random(255)+')';
+			return rndCol;
+		}
+
+		var divs = document.querySelectorAll('div');
+
+		for(var i = 0; i<divs.length; i++){
+			divs[i].onclick = function(e){
+				e.target.style.backgroundColor = bgChange();
+			}
+		}
+	</script>
+</body>
+</html>
